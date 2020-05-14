@@ -1,5 +1,7 @@
-  
+
 int led1 = D7;
+
+void Handler(const char *event, const char *data);
 
 void setup() {
     
@@ -26,13 +28,15 @@ void Handler(const char *event, const char *data) {
     digitalWrite(led1, HIGH);
     delay(500);
     digitalWrite(led1, LOW);
+    delay(700);
     }
     
     else if (strcmp(data,"pat")==0) {
        
     digitalWrite(led1, HIGH);
-    delay(1000);
+    delay(500);
     digitalWrite(led1, LOW);
+    delay(700);
     
     }
 
@@ -40,6 +44,5 @@ void Handler(const char *event, const char *data) {
     
 
 void loop() {
-    
-
+     //Particle.publish("Deakin_RIOT_SIT210_Photon_Buddy","wave");
 }
